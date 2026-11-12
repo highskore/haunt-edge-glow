@@ -1,0 +1,20 @@
+[plugin]
+id = "dev.haunt.edge-glow"
+name = "Edge glow"
+description = "A hairline of light at the top of the screen while an agent waits for you"
+version = "0.1.0"
+api = "0.5"
+entry = "target/wasm32-wasip2/release/haunt_plugin.wasm"
+license = "MIT"
+
+[capabilities]
+# Lets Haunt put the waiting command in the label, "api · git push? · 2m"; the plugin never reads it.
+event_details = true
+events = ["agent.session-start", "agent.prompt", "agent.subagent", "agent.tool", "agent.permission-request", "agent.question", "agent.stop", "agent.unknown"]
+glow = true
+# Retries a refused show.
+timer = true
+
+[settings]
+label = { type = "string", default = "tab", description = "At the glow's right end: \"tab\" (who has waited longest), \"count\" (\"2 need you\") or \"none\"" }
+unverified = { type = "bool", default = false, description = "Also follow events without the tab's nonce, which anything in the terminal can forge" }

@@ -1,6 +1,17 @@
+<div align="center">
+
+<img src="docs/icon.png" width="96" alt="">
+
 # Edge glow
 
-A hairline of light at the top of the screen while an agent waits for you.
+**A hairline of light at the top of the screen while an agent waits for you.**
+
+[![Haunt plugin](https://img.shields.io/badge/Haunt-plugin-D97757)](https://github.com/highskore/haunt-hackathon)
+![Plugin API 0.5](https://img.shields.io/badge/plugin%20API-0.5-111)
+![WASM component](https://img.shields.io/badge/WASM-component-654ff0?logo=webassembly&logoColor=white)
+[![License: MIT](https://img.shields.io/badge/license-MIT-6b7280)](LICENSE)
+
+</div>
 
 While any agent needs you, a thin orange glow breathes along the top edge of the display Haunt's window is on, over every app. At its right end Haunt names the agent that has waited longest, what it wants and for how long: `api · git push? · 2m`. It goes the moment you answer. Under Reduce Motion the glow is steady.
 
